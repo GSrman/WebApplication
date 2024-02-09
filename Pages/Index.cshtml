@@ -1,0 +1,14 @@
+﻿@page
+@model IndexModel
+@{
+    
+    ViewData["Title"] = "Homes page";
+    // Hier call ik de api method.
+    string result = await ApiCalls.CallTwitter.GetBearerToken();
+}
+
+<div class="text-center">
+    <h1 class="display-4">Twitter API Call .NET WebApplication</h1>
+    <p style="overflow-wrap: break-word;">@result</p>
+    <p>This Twitter Bearer token has been aquired using the Twitter API.<br>Done by Gerjon Schuurman</p>
+</div>
